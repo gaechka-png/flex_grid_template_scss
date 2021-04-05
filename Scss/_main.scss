@@ -1,0 +1,204 @@
+     .container {
+         display: grid;
+         grid-template-columns: 40% 30% 30%;
+         grid-template-rows: repeat(6, auto);
+         grid-column-gap: 2px;
+         grid-row-gap: 10px;
+         max-width: 1041px;
+         margin: 16px auto;
+         background-color: $container-color;
+         padding: 1px 45px;
+
+         header {
+             display: flex;
+             justify-content: space-between;
+             @include alingment(1, 4, 1, 2);
+             border-bottom: 2px solid $border-color;
+             color: $header-color;
+             padding: 17px 0;
+
+             i {
+                 color: $logo-color;
+                 font-size: 29px;
+                 @include indent(2px, 0, 0, 4px);
+             }
+
+             button,
+             button:active,
+             button:focus {
+                 background-color: $button-color;
+                 color: $container-color;
+                 border-radius: 1.3em;
+                 border-style: none;
+                 outline: none;
+                 width: 72px;
+                 @include indent(2px, 9px, 4px, 0);
+                 font-size: 12px;
+             }
+
+             ul {
+                 display: flex;
+                 list-style-type: none;
+                 font-size: 13px;
+
+                 li {
+                     margin-top: 6px;
+                     @include indent(6px, 3px, 0, 11px);
+
+                     a {
+                         text-decoration: none;
+                         color: inherit;
+                     }
+                 }
+             }
+
+         }
+
+         .hero {
+             @include alingment(1, 2, 2, 3);
+             width: 382px;
+
+             img {
+                 width: 98%;
+                 height: 251px
+             }
+         }
+
+         .asidebar {
+             @include alingment(1, 2, 3, 5);
+             border-top: 3px solid $border-color2;
+             background-color: $asidebar-color;
+             @include interior(25px, 0, 0, 21px);
+             width: 374px;
+
+             h4 {
+                 font-size: 15.6px;
+                 margin-bottom: 17px;
+             }
+
+             ul {
+                 list-style-type: none;
+                 font-size: 10px;
+             }
+
+             li {
+                 margin: 6px 0px;
+             }
+         }
+
+         main {
+             @include alingment(2, 4, 2, 4);
+
+             h2 {
+                 color: $logo-color;
+                 font-size: 26.6px;
+                 @include indent(1px, 0, 14px, 0);
+             }
+
+             p {
+                 font-weight: 400;
+                 font-size: 13.3px;
+                 color: $p-color;
+                 @include indent(10px, 20px, 0, 0);
+             }
+         }
+
+         .help {
+             display: flex;
+             justify-content: space-around;
+             @include alingment(2, 4, 4, 5);
+             border: 1.5px solid $danger-color;
+             margin-top: 47px;
+             width: 560px;
+             height: 119px;
+
+             .help-item {
+                 display: flex;
+                 flex-direction: column;
+                 align-items: flex-start;
+                 justify-content: space-around;
+                 margin: 11px;
+
+                 h4 {
+                     font-weight: 500;
+                     font-size: 15.1px;
+                     margin-left: 3px;
+                 }
+
+                 p {
+                     margin: 4px 0 8px;
+                     font-size: 10px;
+                 }
+
+                 button {
+                     border: 2.5px solid $logo-color;
+                     padding: 4px;
+                     color: $logo-color;
+                     font-weight: 500;
+                     background-color: $container-color;
+                     cursor: pointer;
+                 }
+             }
+         }
+
+         .gallery {
+             display: grid;
+             @include alingment(1, 3, 5, 6);
+             grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+             grid-gap: 9px;
+
+             img {
+                 width: 98%;
+             }
+         }
+
+         .sidebar-related {
+             grid-column: 3/4;
+             grid-row: 5/6;
+             @include alingment(3, 4, 5, 6);
+             padding: 0.1em;
+             margin-left: 24px;
+             width: 224px;
+
+             h3 {
+                 padding-bottom: .4em;
+                 margin-bottom: 5px;
+                 border-bottom: 1px solid $danger-color;
+                 font-size: 20px;
+             }
+
+             ul {
+                 margin-left: 21px;
+                 font-size: 13px;
+             }
+
+             a {
+                 font-weight: 500;
+                 color: $a-color;
+                 text-decoration: none;
+
+             }
+         }
+
+         footer {
+             @include alingment(1, 4, 6, 7);
+             text-align: center;
+             background-color: $header-color;
+             padding: 12px 0px;
+             width: 946px;
+             height: 82px;
+
+             h3 {
+                 color: $container-color;
+                 @include indent(5px, 0, 9px, 0);
+                 padding-left: 7px;
+                 font-size: 16px;
+             }
+
+             p {
+                 font-size: 10px;
+             }
+         }
+
+
+     }

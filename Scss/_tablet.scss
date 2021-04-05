@@ -1,0 +1,72 @@
+@media screen and (max-width:768px) {
+
+    .container {
+        grid-template-rows: repeat(8, auto);
+
+        .hero {
+            display: none;
+        }
+
+        .asidebar {
+            @include alingment(1, 4, 2, 3);
+            border-top: none;
+            text-align: center;
+            width: auto;
+            padding-left: initial;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+        }
+
+        main {
+            @include alingment(1, 4, 3, 4);
+
+            h2 {
+                text-align: center;
+            }
+        }
+
+        .help {
+            @include alingment(1, 4, 4, 5);
+            width: auto;
+        }
+
+        .gallery {
+            @include alingment(1, 4, 5, 6);
+        }
+
+        .sidebar-related {
+            @include alingment(1, 4, 6, 7);
+            margin-left: initial;
+            width: auto;
+            margin-bottom: 27px;
+
+            ul {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+            }
+
+            h3 {
+                text-align: center;
+            }
+        }
+
+        footer {
+            @include alingment(1, 4, 7, 8);
+            text-align: center;
+            background-color: $header-color;
+            padding: 12px 0px;
+            width: auto;
+
+            p {
+                font-size: 10px;
+            }
+
+        }
+    }
+}
