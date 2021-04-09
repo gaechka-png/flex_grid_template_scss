@@ -1,0 +1,12 @@
+@mixin indent($top, $right, $bottom, $left) {
+    margin: $top $right $bottom $left; 
+}
+
+@mixin interior($top, $right, $bottom, $left) {
+    padding: $top, $right, $bottom, $left;
+}
+    
+@mixin alingment($col-start, $col-end, $row-start, $row-end) {
+    grid-column: #{$col-start}/#{$col-end};
+    grid-row: #{$row-start}/#{$row-end};
+}

@@ -56,6 +56,10 @@
   color: inherit;
 }
 
+.container header ul li a:hover {
+  color: blue;
+}
+
 .container .hero {
   grid-column: 1/2;
   grid-row: 2/3;
